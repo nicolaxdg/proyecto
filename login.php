@@ -43,8 +43,8 @@
     <span>or <a href="signup.php">SignUp</a></span>
 
     <form action="login.php" method="POST">
-      <input name="correoUsuario" type="text" placeholder="Enter your email" >
-      <input name="contraUsuario" type="password" placeholder="Enter your Password" >
+      <input name="correoUsuario" type="text" placeholder="Enter your email" required>
+      <input name="contraUsuario" type="password" placeholder="Enter your Password" required>
       <input type="submit" value="Submit" >
     </form>
   </body>
