@@ -50,6 +50,7 @@
     <form action="login.php" method="POST">
       <input name="correoUsuario" type="text" placeholder="Enter your email" required>
       <input name="contraUsuario" type="password" placeholder="Enter your Password" required>
+            <p class="message"><a href="#">Cambiar clave</a></p>
       <input type="submit" value="Submit" >
     </form>
   </body>
