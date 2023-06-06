@@ -33,9 +33,9 @@
     <span>o <a href="login.php">Ingresar</a></span>
 
     <form action="signup.php" method="POST">
-      <input name="correoUsuario" type="text" placeholder="Ingrese su correo">
-      <input name="nombreUsuario" type="text" placeholder="Ingrese su nombre">
-      <input name="contraUsuario" type="password" placeholder="Ingrese su contraseña">
+      <input name="correoUsuario" type="text" placeholder="Ingrese su correo" required>
+      <input name="nombreUsuario" type="text" placeholder="Ingrese su nombre" required>
+      <input name="contraUsuario" type="password" placeholder="Ingrese su contraseña" required>
       <input type="submit" value="Registrar">
     </form>
 
