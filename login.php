@@ -1,3 +1,29 @@
+<?php
+
+  session_start();
+
+  if (isset($_SESSION['idUsuario'])) {
+    header('Location: /php-login');
+  }
+  require 'database.php';
+
+  if (!empty($_POST['correoUsuario']) && !empty($_POST['contraUsuario'])) {
+    $records = $conn->prepare('SELECT idUsuario, correoUsuario, contraUsuario FROM registro WHERE correoUsuario = :correoUsuario');
+    $records->bindParam(':correoUsuario', $_POST['correoUsuario']);
+    $records->execute();
+    $results = $records->fetch(PDO::FETCH_ASSOC);
+
+    $message = '';
+
+
+   
+
+
+  }
+
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
