@@ -9,6 +9,9 @@
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':correoUsuario', $_POST['correoUsuario']);
     $stmt->bindParam(':nombreUsuario', $_POST['nombreUsuario']);
+    $contraUsuario = password_hash($_POST['contraUsuario'], PASSWORD_BCRYPT);
+    $stmt->bindParam(':contraUsuario', $contraUsuario);
+
 
        if ($stmt->execute()) {
       $message = 'Usuario creado con exito';
