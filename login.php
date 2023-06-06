@@ -15,7 +15,12 @@
 
     $message = '';
 
-
+    if (count($results) > 0 && password_verify($_POST['contraUsuario'], $results['contraUsuario'])) {
+        $_SESSION['idUsuario'] = $results['idUsuario'];
+        header("Location: /php-login");
+      } else {
+        $message = 'Sorry, those credentials do not match';
+      }
    
 
 
