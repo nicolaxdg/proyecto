@@ -17,6 +17,8 @@
         $message = 'Sorry there must have been an issue creating your account';
       }
   
+      $contraUsuario = password_hash($_POST['contraUsuario'], PASSWORD_BCRYPT);
+      $stmt->bindParam(':contraUsuario', $contraUsuario);
 
   }
 ?>
