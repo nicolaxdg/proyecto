@@ -10,6 +10,12 @@
     $stmt->bindParam(':correoUsuario', $_POST['correoUsuario']);
     $stmt->bindParam(':nombreUsuario', $_POST['nombreUsuario']);
 
+       if ($stmt->execute()) {
+      $message = 'Usuario creado con exito';
+    } else {
+      $message = 'Sorry there must have been an issue creating your account';
+    }
+
   }
 ?>
 
