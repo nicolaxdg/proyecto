@@ -1,4 +1,19 @@
+<?php
+
+  require 'database.php';
+
+  $message = '';
+
+  if (!empty($_POST['correoUsuario']) && !empty($_POST['contraUsuario'])) {
+    $sql = "INSERT INTO registro (correoUsuario, nombreUsuario, contraUsuario) VALUES (:correoUsuario, :nombreUsuario, :contraUsuario)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':correoUsuario', $_POST['correoUsuario']);
+    $stmt->bindParam(':nombreUsuario', $_POST['nombreUsuario']);
+
+  }
 ?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
