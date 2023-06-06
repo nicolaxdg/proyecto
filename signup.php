@@ -10,6 +10,14 @@
     $stmt->bindParam(':correoUsuario', $_POST['correoUsuario']);
     $stmt->bindParam(':nombreUsuario', $_POST['nombreUsuario']);
 
+
+    if ($stmt->execute()) {
+        $message = 'Usuario creado con exito';
+      } else {
+        $message = 'Sorry there must have been an issue creating your account';
+      }
+  
+
   }
 ?>
 
@@ -35,7 +43,7 @@
     <form action="signup.php" method="POST">
       <input name="correoUsuario" type="text" placeholder="Ingrese su correo" required>
       <input name="nombreUsuario" type="text" placeholder="Ingrese su nombre" required>
-      <input name="contraUsuario" type="password" placeholder="Ingrese su contraseña" required>
+      <input name="contraUsuario" type="password" placeholder="Ingrese su contraseña" >
       <input type="submit" value="Registrar">
     </form>
 
